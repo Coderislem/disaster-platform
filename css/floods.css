@@ -1,0 +1,581 @@
+/* Base Styles */
+:root {
+    --primary-color: #2196F3;
+    --secondary-color: #1976D2;
+    --danger-color: #f44336;
+    --warning-color: #ff9800;
+    --success-color: #4CAF50;
+    --text-color: #333;
+    --light-text: #fff;
+    --background-light: #f5f5f5;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.flood-hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px; /* Account for alert banner */
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        rgba(33, 150, 243, 0.4),
+        rgba(25, 118, 210, 0.7)
+    );
+    z-index: 2;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+    color: var(--light-text);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 1s ease-out 0.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    animation: fadeIn 1s ease-out 0.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navbar specific styles for flood page */
+.navbar {
+    position: fixed;
+    top: 40px; /* Account for alert banner */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Quick Facts Section */
+.quick-facts {
+    padding: 4rem 2rem;
+    background: var(--background-light);
+}
+
+.fact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fact-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.fact-card:hover {
+    transform: translateY(-5px);
+}
+
+.fact-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Safety Guidelines */
+.safety-guidelines {
+    padding: 4rem 2rem;
+}
+
+.guidelines-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.guideline-card {
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.guideline-card.before { border-left: 5px solid var(--primary-color); }
+.guideline-card.during { border-left: 5px solid var(--danger-color); }
+.guideline-card.after { border-left: 5px solid var(--success-color); }
+
+.guideline-card h3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.guideline-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.guideline-card li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.guideline-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Checklist Section */
+.safety-checklist {
+    padding: 4rem 2rem;
+    background: var(--background-light);
+}
+
+.checklist-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.checklist-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.checklist-item input[type="checkbox"] {
+    margin-right: 1rem;
+}
+
+/* Emergency Contacts */
+.emergency-contacts {
+    padding: 4rem 2rem;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card i {
+    font-size: 2.5rem;
+    color: var(--danger-color);
+    margin-bottom: 1rem;
+}
+
+/* Emergency Button */
+.emergency-button {
+    margin-top: 2rem;
+}
+
+.emergency-call {
+    background: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.emergency-call:hover {
+    background: #d32f2f;
+    transform: scale(1.05);
+}
+
+/* Educational Resources Section */
+.educational-resources {
+    padding: 4rem 2rem;
+    background: var(--background-light);
+}
+
+/* Video Tutorials */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.video-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-card h4 {
+    padding: 1rem;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.video-card p {
+    padding: 0 1rem 1rem;
+    color: #666;
+}
+
+/* Visual Guides */
+.visual-guides {
+    margin-top: 4rem;
+}
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.guide-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+}
+
+.guide-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.guide-content {
+    padding: 1.5rem;
+}
+
+.guide-content h4 {
+    margin: 0 0 1rem 0;
+    color: var(--text-color);
+}
+
+.guide-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.guide-content li {
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.guide-content li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Section Headers */
+.educational-resources h2,
+.educational-resources h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.educational-resources h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.educational-resources h3 {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+/* Community Experiences Section */
+.community-experiences {
+    padding: 4rem 2rem;
+    background: var(--background-light);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}
+
+.experiences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.user-details h4 {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.user-details p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.experience-date {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.experience-content {
+    margin: 1rem 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.experience-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: rgba(33, 150, 243, 0.1);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .fact-container,
+    .guidelines-grid,
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+
+    .video-grid,
+    .guides-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .educational-resources h2 {
+        font-size: 2rem;
+    }
+
+    .educational-resources h3 {
+        font-size: 1.5rem;
+    }
+
+    .experiences-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-card {
+        padding: 1rem;
+    }
+
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .user-details h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Animation for cards */
+.experience-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.experience-card:nth-child(1) { animation-delay: 0.1s; }
+.experience-card:nth-child(2) { animation-delay: 0.2s; }
+.experience-card:nth-child(3) { animation-delay: 0.3s; }
+.experience-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

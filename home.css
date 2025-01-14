@@ -1,0 +1,698 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F9F9F9;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1200px;
+    padding: 0 20px;
+    text-align: center;
+    color: #fff;
+    z-index: 3;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* CTA Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.cta-buttons button {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.cta-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    box-shadow: 0 4px 15px rgba(255, 75, 75, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cta-secondary {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.cta-primary:hover {
+    background-color: #FF3333;
+    transform: translateY(-2px);
+}
+
+.cta-secondary:hover {
+    background-color: var(--white);
+    color: var(--secondary-color);
+}
+
+/* Disaster Overview Section */
+.disaster-overview {
+    padding: 5rem 2rem;
+}
+
+.disaster-overview h2 {
+    text-align: center;
+    color: #2A4D69;
+    margin-bottom: 3rem;
+}
+
+.disaster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.disaster-card {
+    background: var(--white);
+    border: 1px solid rgba(44, 62, 80, 0.1);
+    transition: all 0.3s ease;
+}
+
+.disaster-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(44, 62, 80, 0.1);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.disaster-card h3 {
+    color: #2A4D69;
+    margin-bottom: 1rem;
+}
+
+.learn-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #E67E22;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+/* Impact Chart Styles */
+.impact-chart {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.impact-chart h3 {
+    text-align: center;
+    color: #2A4D69;
+    margin-bottom: 2rem;
+}
+
+.chart-container {
+    overflow-x: auto;
+}
+
+.impact-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.impact-table th,
+.impact-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.impact-table th {
+    background-color: #2A4D69;
+    color: white;
+}
+
+.impact-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Disaster Map Styles */
+.disaster-map {
+    padding: 5rem 2rem;
+    background-color: #f5f5f5;
+}
+
+.map-filters {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #2A4D69;
+    border-radius: 25px;
+    background: transparent;
+    color: #2A4D69;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #2A4D69;
+    color: white;
+}
+
+.map-container {
+    height: 500px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#disaster-map {
+    width: 100%;
+    height: 100%;
+    background: #e5e5e5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+        padding: 0 10px;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+        padding: 0 15px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    
+    .cta-buttons button {
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+}
+
+/* Navigation Styles */
+.navbar {
+    position: fixed;
+    top: 40px; /* Height of alert banner */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: rgba(44, 62, 80, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.logo {
+    height: 40px;
+    /* filter: brightness(0) invert(1); */
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #E67E22;
+}
+
+/* Animation Classes */
+.animate-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.animate-text-delay {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 0.3s;
+}
+
+.animate-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards 0.6s;
+}
+
+.disaster-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.disaster-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Map Marker Styles */
+.disaster-icon {
+    font-size: 24px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.disaster-popup {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.disaster-popup h3 {
+    color: #2A4D69;
+    margin-bottom: 5px;
+}
+
+.disaster-popup p {
+    margin: 0;
+    color: #333;
+}
+
+/* Hero Slider Styles */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Progress bar styles */
+.slide-progress {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    display: flex;
+    gap: 12px;
+}
+
+.progress-bar {
+    width: 40px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.progress-bar.active {
+    background: #fff;
+    width: 50px;
+}
+
+/* Gradient Overlay */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(44, 62, 80, 0.8) 0%,
+        rgba(44, 62, 80, 0.6) 50%,
+        rgba(44, 62, 80, 0.8) 100%
+    );
+    z-index: 2;
+}
+
+/* Add to home.css */
+.legend {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.legend h4 {
+    margin: 0 0 10px;
+    color: #2A4D69;
+}
+
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+    border-radius: 50%;
+}
+
+.legend div {
+    margin-bottom: 5px;
+    clear: both;
+}
+
+/* Custom Disaster Markers */
+.disaster-marker {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+    transform-origin: center;
+    animation: markerPulse 2s infinite;
+}
+
+.marker-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.marker-icon {
+    font-size: 16px;
+    z-index: 2;
+}
+
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.earthquake { background-color: #FF4136; }
+.flood { background-color: #0074D9; }
+.wildfire { background-color: #FF851B; }
+.hurricane { background-color: #B10DC9; }
+.tornado { background-color: #85144b; }
+.tsunami { background-color: #39CCCC; }
+
+.severity-high { transform: scale(1.2); }
+.severity-medium { transform: scale(1); }
+.severity-low { transform: scale(0.8); }
+
+@keyframes markerPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(2); opacity: 0; }
+}
+
+.filter-control {
+    background: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.filter-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background: #f0f0f0;
+}
+
+.filter-btn.active {
+    background: #2A4D69;
+    color: white;
+}
+
+/* Severity Indicators */
+.severity-high {
+    width: 24px;
+    height: 24px;
+}
+
+.severity-medium {
+    width: 20px;
+    height: 20px;
+}
+
+.severity-low {
+    width: 16px;
+    height: 16px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+}
+
+/* Marker Icons */
+.marker-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+}
+
+/* Updated color scheme and styles in home.css */
+:root {
+    --primary-color: #FF4B4B;       /* Vibrant red for urgency */
+    --secondary-color: #2C3E50;     /* Dark slate for content */
+    --accent-color: #F39C12;        /* Orange for highlights */
+    --background-color: #F5F6FA;    /* Light gray background */
+    --text-color: #2C3E50;          /* Dark slate for text */
+    --white: #FFFFFF;
+    --danger: #E74C3C;              /* Red for alerts */
+    --success: #2ECC71;             /* Green for success */
+    --warning: #F1C40F;             /* Yellow for warnings */
+}
+
+.resource-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(44, 62, 80, 0.1);
+}
+
+.resource-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+    color: #FF3333;
+}
+
+/* Add to home.css */
+.alert-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #FF4B4B, #FF6B6B);
+    color: white;
+    padding: 12px 20px;
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideDown 0.5s ease-out;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.alert-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.alert-icon {
+    font-size: 20px;
+}
+
+.alert-message {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.alert-message strong {
+    margin-right: 8px;
+}
+
+.alert-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 8px;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.alert-close:hover {
+    opacity: 1;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Adjust navbar position to account for alert */
+.navbar {
+    top: 40px; /* Height of alert banner */
+}
+
+/* Adjust other fixed elements if needed */
+.hero {
+    margin-top: 40px;
+}

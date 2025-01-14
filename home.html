@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Disaster Awareness</title>
+    <link rel="stylesheet" href="home.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="interactive.js">
+    <link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+    <div class="alert-banner" id="alertBanner">
+        <div class="alert-content">
+            <div class="alert-icon">⚠️</div>
+            <div class="alert-message">
+                <strong>WARNING:</strong> 
+                <span id="alertText">Severe weather alert in Southeast Asia - Tropical Storm approaching</span>
+            </div>
+        </div>
+        <button class="alert-close" onclick="closeAlert()">×</button>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <nav class="navbar">
+            <img src="./UtzOLGnAQMu3ENEs13MK3g.webp" alt="DisasterGuard Logo" class="logo">
+            <div class="nav-links">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Resources</a>
+                <a href="#" class="nav-link">Contact</a>
+            </div>
+        </nav>
+        
+        <!-- Add video background -->
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="./videos/Natural Disaster Compilation.mp4" type="video/mp4">
+            <!-- Add fallback image -->
+            <img src="./hero_img/fallback.jpg" alt="Natural Disasters">
+        </video>
+
+        <div class="hero-content">
+            <h1 class="animate-text">Stay Informed, Stay Safe</h1>
+            <p class="animate-text-delay">Your comprehensive resource for natural disaster awareness and preparedness</p>
+            <div class="cta-buttons animate-up">
+                <button class="cta-primary">Learn More</button>
+                <button class="cta-secondary">View Live Alerts</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Disaster Overview Section -->
+    <section class="disaster-overview">
+        <h2>Types of Natural Disasters</h2>
+        <div class="disaster-grid">
+            <div class="disaster-card">
+                <div class="card-icon">🌊</div>
+                <h3>Floods</h3>
+                <p>Flash floods can strike with little warning. Learn early warning signs and evacuation procedures to protect your family.</p>
+                <a href="floods.html" class="learn-more">Get Flood Safety Tips</a>
+            </div>
+            <div class="disaster-card">
+                <div class="card-icon">🌋</div>
+                <h3>Earthquakes</h3>
+                <p>Every year, over 500,000 earthquakes occur worldwide. Know the "Drop, Cover, Hold" technique and secure your home.</p>
+                <a href="#" class="learn-more">Learn Earthquake Safety</a>
+            </div>
+            <div class="disaster-card">
+                <div class="card-icon">🔥</div>
+                <h3>Wildfires</h3>
+                <p>Wildfires can spread at speeds of up to 14 mph. Create an evacuation plan and maintain defensible space around your home.</p>
+                <a href="#" class="learn-more">View Prevention Guide</a>
+            </div>
+            <div class="disaster-card">
+                <div class="card-icon">🌪️</div>
+                <h3>Tornadoes</h3>
+                <p>With winds reaching 300+ mph, tornadoes require immediate action. Learn to identify warning signs and find safe shelter.</p>
+                <a href="#" class="learn-more">Tornado Preparedness</a>
+            </div>
+            <div class="disaster-card">
+                <div class="card-icon">🌊</div>
+                <h3>Tsunamis</h3>
+                <p>These giant waves can reach heights of 100+ feet. Know evacuation routes and natural warning signs.</p>
+                <a href="#" class="learn-more">Tsunami Guidelines</a>
+            </div>
+            <div class="disaster-card">
+                <div class="card-icon">🌀</div>
+                <h3>Hurricanes</h3>
+                <p>Hurricane season brings devastating winds and floods. Prepare your home and know when to evacuate.</p>
+                <a href="#" class="learn-more">Hurricane Ready Guide</a>
+            </div>
+        </div>
+
+        <!-- Impact Comparison Chart -->
+        <div class="impact-chart">
+            <h3>Global Impact Comparison</h3>
+            <div class="chart-container">
+                <table class="impact-table">
+                    <thead>
+                        <tr>
+                            <th>Disaster Type</th>
+                            <th>Annual Frequency</th>
+                            <th>Average Fatalities</th>
+                            <th>Economic Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Floods</td>
+                            <td>150+</td>
+                            <td>5,000+</td>
+                            <td>$40B</td>
+                        </tr>
+                        <tr>
+                            <td>Earthquakes</td>
+                            <td>500,000+</td>
+                            <td>20,000+</td>
+                            <td>$35B</td>
+                        </tr>
+                        <tr>
+                            <td>Wildfires</td>
+                            <td>100+</td>
+                            <td>3,000+</td>
+                            <td>$10B</td>
+                        </tr>
+                        <tr>
+                            <td>Tornadoes</td>
+                            <td>1,200+</td>
+                            <td>80+</td>
+                            <td>$1B</td>
+                        </tr>
+                        <tr>
+                            <td>Tsunamis</td>
+                            <td>10+</td>
+                            <td>1,000+</td>
+                            <td>$5B</td>
+                        </tr>
+                        <tr>
+                            <td>Hurricanes</td>
+                            <td>12+</td>
+                            <td>10,000+</td>
+                            <td>$50B</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <!-- <section class="disaster-map">
+        <h2>Global Disaster Monitor</h2>
+        <div class="map-filters">
+            <button class="filter-btn active" data-type="all">All</button>
+            <button class="filter-btn" data-type="floods">Floods</button>
+            <button class="filter-btn" data-type="earthquakes">Earthquakes</button>
+            <button class="filter-btn" data-type="wildfires">Wildfires</button>
+        </div>
+        <div class="map-container">
+            Map will be inserted here via JavaScript
+            <div id="disaster-map"></div>
+        </div>
+    </section>  -->
+    <section class="live-map">
+        <h2>Global Disaster Monitoring</h2>
+        <div id="disaster-map"></div>
+
+
+
+ 
+
+    <section class="resources">
+        <h2>Emergency Resources</h2>
+        <div class="resource-grid">
+            <div class="resource-card">
+                <i class="fas fa-kit-medical"></i>
+                <h3>First Aid Guide</h3>
+                <p>Essential first aid techniques for emergencies</p>
+                <a href="#" class="resource-link">View Guide</a>
+            </div>
+            <!-- Add more resource cards -->
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="home.js"></script>
+    <script src="interactive.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', initMap);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.9/datamaps.all.min.js"></script>
+    <script src="js/map.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const worldMap = new WorldDisasterMap();
+            worldMap.initialize();
+        });
+    </script>
+</body>
+</html>
