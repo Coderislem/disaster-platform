@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Safety Guide</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="css/earthquakes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Alert Banner -->
+    <div class="alert-banner" id="alertBanner">
+        <div class="alert-content">
+            <div class="alert-icon">⚠️</div>
+            <div class="alert-message">
+                <strong>WARNING:</strong> 
+                <span id="alertText">Recent seismic activity detected in multiple regions</span>
+            </div>
+        </div>
+        <button class="alert-close" onclick="closeAlert()">×</button>
+    </div>
+
+    <!-- Hero Section with Video Background -->
+    <header class="earthquake-hero">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <img src="./UtzOLGnAQMu3ENEs13MK3g.webp" alt="DisasterGuard Logo" class="logo">
+            <div class="nav-links">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Resources</a>
+                <a href="#" class="nav-link">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="videos/earthquake-background.mp4" type="video/mp4">
+            <img src="./hero_img/earthquake-fallback.jpg" alt="Earthquake Scene">
+        </video>
+
+        <!-- Hero Overlay -->
+        <div class="hero-overlay"></div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 class="animate-text">Earthquake Safety Guide</h1>
+            <p class="animate-text-delay">Learn how to prepare, respond, and survive during earthquakes</p>
+            <div class="cta-buttons animate-up">
+                <button class="emergency-call">
+                    <i class="fas fa-phone"></i>
+                    Emergency: 911
+                </button>
+                <button class="cta-secondary">View Safety Tips</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Facts Panel -->
+    <section class="quick-facts">
+        <h2>Essential Earthquake Information</h2>
+        <div class="fact-container">
+            <div class="fact-card">
+                <i class="fas fa-globe-americas"></i>
+                <h3>What is an Earthquake?</h3>
+                <p>An earthquake is a sudden release of energy in Earth's crust that creates seismic waves.</p>
+            </div>
+            <div class="fact-card">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Warning Signs</h3>
+                <p>Foreshocks, unusual animal behavior, and ground deformation can precede major earthquakes.</p>
+            </div>
+            <div class="fact-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Magnitude Scale</h3>
+                <p>The Richter scale measures earthquake intensity, with each number representing a 10-fold increase.</p>
+            </div>
+            <div class="fact-card">
+                <i class="fas fa-house-damage"></i>
+                <h3>Structural Impact</h3>
+                <p>Earthquakes can damage buildings, trigger landslides, and cause devastating tsunamis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Guidelines -->
+    <section class="safety-guidelines">
+        <h2>Before, During & After an Earthquake</h2>
+        <div class="guidelines-grid">
+            <div class="guideline-card before">
+                <h3><i class="fas fa-clipboard-check"></i> Before an Earthquake</h3>
+                <ul>
+                    <li>Secure heavy furniture</li>
+                    <li>Create emergency kit</li>
+                    <li>Identify safe spots</li>
+                    <li>Practice Drop, Cover, Hold</li>
+                    <li>Know utility shutoffs</li>
+                </ul>
+            </div>
+            <div class="guideline-card during">
+                <h3><i class="fas fa-exclamation-circle"></i> During an Earthquake</h3>
+                <ul>
+                    <li>Drop, Cover, and Hold On</li>
+                    <li>Stay away from windows</li>
+                    <li>If in bed, stay there</li>
+                    <li>Avoid doorways</li>
+                    <li>Wait for shaking to stop</li>
+                </ul>
+            </div>
+            <div class="guideline-card after">
+                <h3><i class="fas fa-hand-holding-medical"></i> After an Earthquake</h3>
+                <ul>
+                    <li>Check for injuries</li>
+                    <li>Watch for aftershocks</li>
+                    <li>Monitor news updates</li>
+                    <li>Inspect for damage</li>
+                    <li>Avoid damaged areas</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contacts -->
+    <section class="emergency-contacts">
+        <h2>Emergency Contacts</h2>
+        <div class="contacts-grid">
+            <div class="contact-card">
+                <i class="fas fa-ambulance"></i>
+                <h3>Emergency Services</h3>
+                <p>911</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Seismic Center</h3>
+                <p>1-800-QUAKE-INFO</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-hospital"></i>
+                <h3>Emergency Medical</h3>
+                <p>1-800-HOSPITAL</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/earthquakes.js"></script>
+</body>
+</html>

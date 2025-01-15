@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildfire Safety Guide</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="css/wildfires.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Alert Banner -->
+    <div class="alert-banner" id="alertBanner">
+        <div class="alert-content">
+            <div class="alert-icon">🔥</div>
+            <div class="alert-message">
+                <strong>WARNING:</strong> 
+                <span id="alertText">Active wildfire alerts in multiple regions</span>
+            </div>
+        </div>
+        <button class="alert-close" onclick="closeAlert()">×</button>
+    </div>
+
+    <!-- Hero Section with Video Background -->
+    <header class="wildfire-hero">
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <img src="./UtzOLGnAQMu3ENEs13MK3g.webp" alt="DisasterGuard Logo" class="logo">
+            <div class="nav-links">
+                <a href="home.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About</a>
+                <a href="#" class="nav-link">Resources</a>
+                <a href="#" class="nav-link">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="videos/wildfire-background.mp4" type="video/mp4">
+            <img src="./hero_img/wildfire-fallback.jpg" alt="Wildfire Scene">
+        </video>
+
+        <!-- Hero Overlay -->
+        <div class="hero-overlay"></div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1 class="animate-text">Wildfire Safety Guide</h1>
+            <p class="animate-text-delay">Learn how to prepare, respond, and stay safe during wildfires</p>
+            <div class="cta-buttons animate-up">
+                <button class="emergency-call">
+                    <i class="fas fa-phone"></i>
+                    Emergency: 911
+                </button>
+                <button class="cta-secondary">View Safety Tips</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Facts Panel -->
+    <section class="quick-facts">
+        <h2>Essential Wildfire Information</h2>
+        <div class="fact-container">
+            <div class="fact-card">
+                <i class="fas fa-fire"></i>
+                <h3>What is a Wildfire?</h3>
+                <p>A wildfire is an uncontrolled fire that burns in wildland vegetation, often in rural areas.</p>
+            </div>
+            <div class="fact-card">
+                <i class="fas fa-wind"></i>
+                <h3>Warning Signs</h3>
+                <p>Smoke, unusual heat, red skies, and emergency alerts are key indicators of approaching wildfires.</p>
+            </div>
+            <div class="fact-card">
+                <i class="fas fa-temperature-high"></i>
+                <h3>Danger Levels</h3>
+                <p>Wildfires can spread at speeds of up to 14 mph and reach temperatures of over 2,000°F.</p>
+            </div>
+            <div class="fact-card">
+                <i class="fas fa-house-damage"></i>
+                <h3>Property Impact</h3>
+                <p>Wildfires can destroy homes and create dangerous air quality conditions for miles around.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Guidelines -->
+    <section class="safety-guidelines">
+        <h2>Before, During & After a Wildfire</h2>
+        <div class="guidelines-grid">
+            <div class="guideline-card before">
+                <h3><i class="fas fa-clipboard-check"></i> Before a Wildfire</h3>
+                <ul>
+                    <li>Create defensible space around your home</li>
+                    <li>Prepare an emergency kit</li>
+                    <li>Develop an evacuation plan</li>
+                    <li>Install fire-resistant materials</li>
+                    <li>Clear vegetation near buildings</li>
+                </ul>
+            </div>
+            <div class="guideline-card during">
+                <h3><i class="fas fa-exclamation-circle"></i> During a Wildfire</h3>
+                <ul>
+                    <li>Follow evacuation orders immediately</li>
+                    <li>Stay tuned to emergency broadcasts</li>
+                    <li>Keep windows and doors closed</li>
+                    <li>Use N95 masks for smoke</li>
+                    <li>Stay hydrated</li>
+                </ul>
+            </div>
+            <div class="guideline-card after">
+                <h3><i class="fas fa-hand-holding-medical"></i> After a Wildfire</h3>
+                <ul>
+                    <li>Wait for official clearance to return</li>
+                    <li>Check for hot spots</li>
+                    <li>Document damage</li>
+                    <li>Watch for flash floods</li>
+                    <li>Monitor air quality</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational Resources Section -->
+    <section class="educational-resources">
+        <h2>Learn How to Handle Wildfires</h2>
+        
+        <!-- Video Tutorials -->
+        <div class="video-tutorials">
+            <h3>Essential Safety Videos</h3>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID1" 
+                                title="Wildfire Preparation Guide" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h4>Wildfire Preparation Guide</h4>
+                    <p>Learn essential steps to prepare your home and family for wildfire season.</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID2" 
+                                title="Evacuation Procedures" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h4>Evacuation Procedures</h4>
+                    <p>Step-by-step guide for safe evacuation during wildfires.</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/VIDEO_ID3" 
+                                title="Post-Wildfire Safety" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h4>Post-Wildfire Safety</h4>
+                    <p>Important steps for safely returning home after a wildfire.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visual Guides -->
+        <div class="visual-guides">
+            <h3>Visual Safety Guides</h3>
+            <div class="guides-grid">
+                <div class="guide-card">
+                    <img src="images/defensible-space.jpg" alt="Defensible Space Guide">
+                    <div class="guide-content">
+                        <h4>Creating Defensible Space</h4>
+                        <ul>
+                            <li>30ft primary zone clearance</li>
+                            <li>100ft secondary zone management</li>
+                            <li>Proper vegetation spacing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <img src="images/evacuation-zones.jpg" alt="Evacuation Zones">
+                    <div class="guide-content">
+                        <h4>Understanding Evacuation Zones</h4>
+                        <ul>
+                            <li>Red Zone: Immediate evacuation</li>
+                            <li>Yellow Zone: Be prepared</li>
+                            <li>Green Zone: Stay alert</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="guide-card">
+                    <img src="images/air-quality.jpg" alt="Air Quality Guide">
+                    <div class="guide-content">
+                        <h4>Air Quality Safety</h4>
+                        <ul>
+                            <li>Understanding AQI levels</li>
+                            <li>Proper mask usage</li>
+                            <li>Indoor air protection</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Checklist -->
+    <section class="safety-checklist">
+        <h2>Wildfire Preparedness Checklist</h2>
+        <div class="checklist-container">
+            <div class="checklist-category">
+                <h3>Emergency Kit Essentials</h3>
+                <div class="checklist-items">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="n95masks">
+                        <label for="n95masks">N95 Masks</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="water">
+                        <label for="water">Water (3-day supply)</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="firstaid">
+                        <label for="firstaid">First aid kit</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="documents">
+                        <label for="documents">Important documents</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Experiences Section -->
+    <section class="community-experiences">
+        <h2>Community Wildfire Experiences</h2>
+        <p class="section-subtitle">Real stories from wildfire survivors and responders</p>
+        
+        <div class="experiences-grid">
+            <!-- Experience Card 1 -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="user-info">
+                        <img src="avatars/user1.jpg" alt="John Martinez" class="user-avatar">
+                        <div class="user-details">
+                            <h4>John Martinez</h4>
+                            <p>California, USA</p>
+                        </div>
+                    </div>
+                    <div class="experience-date">1 month ago</div>
+                </div>
+                <div class="experience-content">
+                    <p>"Creating defensible space around our home saved it during the last wildfire. Regular maintenance and clearing vegetation made a huge difference. Don't wait until fire season to prepare."</p>
+                </div>
+                <div class="experience-tags">
+                    <span class="tag">Prevention</span>
+                    <span class="tag">Home Safety</span>
+                </div>
+            </div>
+
+            <!-- Experience Card 2 -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="user-info">
+                        <img src="avatars/user2.jpg" alt="Lisa Thompson" class="user-avatar">
+                        <div class="user-details">
+                            <h4>Lisa Thompson</h4>
+                            <p>Oregon, USA</p>
+                        </div>
+                    </div>
+                    <div class="experience-date">2 weeks ago</div>
+                </div>
+                <div class="experience-content">
+                    <p>"Having an evacuation plan and emergency kit ready helped us act quickly when the evacuation order came. Every minute counts during a wildfire emergency."</p>
+                </div>
+                <div class="experience-tags">
+                    <span class="tag">Evacuation</span>
+                    <span class="tag">Emergency Kit</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contacts -->
+    <section class="emergency-contacts">
+        <h2>Emergency Contacts</h2>
+        <div class="contacts-grid">
+            <div class="contact-card">
+                <i class="fas fa-ambulance"></i>
+                <h3>Emergency Services</h3>
+                <p>911</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Wildfire Hotline</h3>
+                <p>1-800-FIRE-HELP</p>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-hospital"></i>
+                <h3>Burn Center</h3>
+                <p>1-800-BURN-HELP</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/wildfires.js"></script>
+</body>
+</html> 
