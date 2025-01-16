@@ -1,0 +1,39 @@
+.help-portal {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.help-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.donate-section,
+.volunteer-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.donate-option {
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+.donate-option:hover {
+    border-color: var(--primary-color);
+}
+
+.volunteer-card {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--background-light);
+    border-radius: 5px;
+} 

@@ -1,0 +1,33 @@
+.resource-directory {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.directory-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.resource-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.resource-list {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-list li {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.map-link {
+    color: var(--primary-color);
+    text-decoration: none;
+} 

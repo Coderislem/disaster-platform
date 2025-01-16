@@ -100,3 +100,30 @@
 
 /* Copy all the remaining styles from floods.css, 
    they will work with the existing color variables */ 
+
+/* Add to all three CSS files */
+.statistics-section {
+    padding: 4rem 2rem;
+    background: var(--background-light);
+}
+
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.chart-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+@media (max-width: 768px) {
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+} 

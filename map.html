@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Disaster Map - DisasterGuard</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Include the same navbar as home.html -->
+    <nav class="navbar">
+        <!-- Copy navbar content from home.html -->
+    </nav>
+
+    <section class="disaster-map">
+        <h2>Live Disaster Tracking</h2>
+        <div class="map-filters">
+            <button class="filter-btn active" data-type="all">All Disasters</button>
+            <button class="filter-btn" data-type="floods">Floods</button>
+            <button class="filter-btn" data-type="wildfires">Wildfires</button>
+            <button class="filter-btn" data-type="earthquakes">Earthquakes</button>
+            <button class="filter-btn" data-type="hurricanes">Hurricanes</button>
+        </div>
+        <div class="map-container">
+            <div id="disaster-map"></div>
+            <div class="map-legend">
+                <h4>Disaster Types</h4>
+                <!-- Legend items will be added by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/map.js"></script>
+</body>
+</html> 

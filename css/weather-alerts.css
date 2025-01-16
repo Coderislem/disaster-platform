@@ -1,0 +1,31 @@
+.weather-alerts {
+    padding: 4rem 2rem;
+}
+
+.alert-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.current-conditions,
+.forecast,
+.alert-list {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.alert-item {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    border-left: 4px solid var(--warning-color);
+}
+
+.alert-item.severe {
+    border-left-color: var(--danger-color);
+} 
