@@ -1,4 +1,50 @@
+/* تنسيقات قسم الرأس */
+.kit-hero {
+    position: relative;
+    height: 40vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('../images/emergency-kit-bg.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 0;
+}
+
+/* تنسيقات محتوى الرأس */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* تنسيقات شريط التنقل */
+.navbar {
+    background: rgba(44, 62, 80, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+}
+
+/* تنسيقات منشئ الحقيبة */
 .kit-builder {
+    background: white;
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -6,15 +52,31 @@
 
 .kit-categories {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 2rem;
-    margin: 2rem 0;
 }
 
 .category {
-    background: white;
-    padding: 2rem;
+    background: #f8f9fa;
     border-radius: 10px;
-    box-shadow: var(--card-shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+}
+
+.category h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.category h3 i {
+    font-size: 1.2em;
 }
 
 .kit-item {
@@ -25,11 +87,17 @@
     border-bottom: 1px solid #eee;
 }
 
+.kit-item:last-child {
+    border-bottom: none;
+}
+
 .quantity {
-    margin-left: auto;
-    padding: 0.5rem;
-    border-radius: 5px;
+    margin-right: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
     border: 1px solid #ddd;
+    background: #f8f8f8;
+    font-family: 'Cairo', sans-serif;
 }
 
 .generate-list {
@@ -39,9 +107,53 @@
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: block;
+    margin: 2rem auto;
+    font-family: 'Cairo', sans-serif;
 }
 
 .generate-list:hover {
     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.generate-list i {
+    margin-right: 0.5rem;
+}
+
+/* تحسينات للنموذج */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+}
+
+label {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* تنسيقات للشاشات المتوسطة والصغيرة */
+@media (max-width: 768px) {
+    .kit-builder {
+        padding: 2rem 1rem;
+    }
+
+    .category {
+        padding: 1.5rem;
+    }
+
+    .kit-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .quantity {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
 } 

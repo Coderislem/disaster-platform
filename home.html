@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natural Disaster Awareness</title>
+    <title>التوعية بالكوارث الطبيعية</title>
     <link rel="stylesheet" href="home.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -11,14 +11,15 @@
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="interactive.js">
     <link rel="stylesheet" href="css/map.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="alert-banner" id="alertBanner">
         <div class="alert-content">
             <div class="alert-icon">⚠️</div>
             <div class="alert-message">
-                <strong>WARNING:</strong> 
-                <span id="alertText">Severe weather alert in Southeast Asia - Tropical Storm approaching</span>
+                <strong>تحذير:</strong> 
+                <span id="alertText">تنبيه طقس شديد في جنوب شرق آسيا - عاصفة استوائية تقترب</span>
             </div>
         </div>
         <button class="alert-close" onclick="closeAlert()">×</button>
@@ -27,22 +28,21 @@
     <!-- Hero Section -->
     <header class="hero">
         <nav class="navbar">
-            <img src="./UtzOLGnAQMu3ENEs13MK3g.webp" alt="DisasterGuard Logo" class="logo">
             <div class="nav-links">
-                <a href="home.html" class="nav-link">Home</a>
-                <a href="map.html" class="nav-link">Disaster Map</a>
-                <a href="emergency-kit.html" class="nav-link">Emergency Kit</a>
-                <a href="training.html" class="nav-link">Training</a>
+                <a href="#" class="nav-link">اتصل بنا</a>
                 <div class="dropdown">
-                    <a href="#" class="nav-link">Resources ▾</a>
+                    <a href="#" class="nav-link">الموارد ▾</a>
                     <div class="dropdown-content">
-                        <a href="weather-alerts.html">Weather Alerts</a>
-                        <a href="resources.html">Emergency Services</a>
-                        <a href="forum.html">Community Forum</a>
-                        <a href="help.html">Ways to Help</a>
+                        <a href="weather-alerts.html">تنبيهات الطقس</a>
+                        <a href="resources.html">خدمات الطوارئ</a>
+                        <a href="forum.html">منتدى المجتمع</a>
+                        <a href="help.html">طرق المساعدة</a>
                     </div>
                 </div>
+                <a href="#" class="nav-link">من نحن</a>
+                <a href="home.html" class="nav-link">الرئيسية</a>
             </div>
+            <img src="./UtzOLGnAQMu3ENEs13MK3g.webp" alt="شعار DisasterGuard" class="logo">
         </nav>
         
         <!-- Add video background -->
@@ -53,86 +53,86 @@
         </video>
 
         <div class="hero-content">
-            <h1 class="animate-text">Stay Informed, Stay Safe</h1>
-            <p class="animate-text-delay">Your comprehensive resource for natural disaster awareness and preparedness</p>
+            <h1 class="animate-text">كن على علم، كن آمناً</h1>
+            <p class="animate-text-delay">مصدرك الشامل للتوعية والاستعداد للكوارث الطبيعية</p>
             <div class="cta-buttons animate-up">
-                <button class="cta-primary">Learn More</button>
-                <button class="cta-secondary">View Live Alerts</button>
+                <button class="cta-primary">اعرف المزيد</button>
+                <button class="cta-secondary">عرض التنبيهات المباشرة</button>
             </div>
         </div>
     </header>
 
     <!-- Disaster Overview Section -->
     <section class="disaster-overview">
-        <h2>Types of Natural Disasters</h2>
+        <h2>أنواع الكوارث الطبيعية</h2>
         <div class="disaster-grid">
             <div class="disaster-card">
                 <div class="card-icon">🌊</div>
-                <h3>Floods</h3>
-                <p>Flash floods can strike with little warning. Learn early warning signs and evacuation procedures to protect your family.</p>
-                <a href="floods.html" class="learn-more">Get Flood Safety Tips</a>
+                <h3>الفيضانات</h3>
+                <p>يمكن أن تضرب الفيضانات المفاجئة دون سابق إنذار. تعرف على علامات الإنذار المبكر وإجراءات الإخلاء لحماية عائلتك.</p>
+                <a href="floods.html" class="learn-more">احصل على نصائح السلامة من الفيضانات</a>
             </div>
             <div class="disaster-card">
                 <div class="card-icon">🌋</div>
-                <h3>Earthquakes</h3>
-                <p>Every year, over 500,000 earthquakes occur worldwide. Know the "Drop, Cover, Hold" technique and secure your home.</p>
-                <a href="earthquakes.html" class="learn-more">Learn Earthquake Safety</a>
+                <h3>الزلازل</h3>
+                <p>كل عام، تحدث أكثر من 500,000 زلزال في العالم. تعرف على طريقة "السقوط، التغطية، الاحتفاظ" وأمن بيتك.</p>
+                <a href="earthquakes.html" class="learn-more">تعلم أمن الزلزال</a>
             </div>
             <div class="disaster-card">
                 <div class="card-icon">🔥</div>
-                <h3>Wildfires</h3>
-                <p>Wildfires can spread at speeds of up to 14 mph. Create an evacuation plan and maintain defensible space around your home.</p>
-                <a href="wildfires.html" class="learn-more">View Prevention Guide</a>
+                <h3>النيران العشوائية</h3>
+                <p>يمكن أن تنتشر النيران العشوائية بسرعات تصل إلى 14 ميلاً في الساعة. أنشأ خطة إخلاء وأبق على مساحة الدفاع حول منزلك.</p>
+                <a href="wildfires.html" class="learn-more">عرض دليل الوقاية</a>
             </div>
           
         </div>
 
         <!-- Impact Comparison Chart -->
         <div class="impact-chart">
-            <h3>Global Impact Comparison</h3>
+            <h3>مقارنة التأثير العالمي</h3>
             <div class="chart-container">
                 <table class="impact-table">
                     <thead>
                         <tr>
-                            <th>Disaster Type</th>
-                            <th>Annual Frequency</th>
-                            <th>Average Fatalities</th>
-                            <th>Economic Impact</th>
+                            <th>نوع الكوارث</th>
+                            <th>تكرار سنوي</th>
+                            <th>الإصابات المتوقعة</th>
+                            <th>التأثير الاقتصادي</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Floods</td>
+                            <td>الفيضانات</td>
                             <td>150+</td>
                             <td>5,000+</td>
                             <td>$40B</td>
                         </tr>
                         <tr>
-                            <td>Earthquakes</td>
+                            <td>الزلازل</td>
                             <td>500,000+</td>
                             <td>20,000+</td>
                             <td>$35B</td>
                         </tr>
                         <tr>
-                            <td>Wildfires</td>
+                            <td>النيران العشوائية</td>
                             <td>100+</td>
                             <td>3,000+</td>
                             <td>$10B</td>
                         </tr>
                         <tr>
-                            <td>Tornadoes</td>
+                            <td>الإعصارات</td>
                             <td>1,200+</td>
                             <td>80+</td>
                             <td>$1B</td>
                         </tr>
                         <tr>
-                            <td>Tsunamis</td>
+                            <td>التسونامي</td>
                             <td>10+</td>
                             <td>1,000+</td>
                             <td>$5B</td>
                         </tr>
                         <tr>
-                            <td>Hurricanes</td>
+                            <td>الإعصارات</td>
                             <td>12+</td>
                             <td>10,000+</td>
                             <td>$50B</td>
@@ -158,7 +158,7 @@
         </div>
     </section>  -->
     <section class="live-map">
-        <h2>Global Disaster Monitoring</h2>
+        <h2>مراقبة الكوارث العالمية</h2>
         <div id="disaster-map"></div>
 
 
@@ -166,13 +166,13 @@
  
 
     <section class="resources">
-        <h2>Emergency Resources</h2>
+        <h2>موارد الطوارئ</h2>
         <div class="resource-grid">
             <div class="resource-card">
                 <i class="fas fa-kit-medical"></i>
-                <h3>First Aid Guide</h3>
-                <p>Essential first aid techniques for emergencies</p>
-                <a href="#" class="resource-link">View Guide</a>
+                <h3>دليل الطوارئ الأولي</h3>
+                <p>أساليب الطوارئ الأولية الأساسية للطوارئ</p>
+                <a href="#" class="resource-link">عرض الدليل</a>
             </div>
             <!-- Add more resource cards -->
         </div>

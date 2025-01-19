@@ -1,68 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emergency Kit Builder - DisasterGuard</title>
+    <title>حقيبة الطوارئ - DisasterGuard</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="css/emergency-kit.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Include navbar -->
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#" class="nav-link">اتصل بنا</a>
+            <a href="#" class="nav-link">الموارد</a>
+            <a href="#" class="nav-link">من نحن</a>
+            <a href="home.html" class="nav-link">الرئيسية</a>
+        </div>
+        <img src="./UtzOLGnAQMu3ENEs13MK3g.webp" alt="شعار DisasterGuard" class="logo">
+    </nav>
 
+    <!-- قسم الرأس -->
+    <header class="kit-hero">
+        <div class="hero-content">
+            <h1>حقيبة الطوارئ الشخصية</h1>
+            <p>قم ببناء حقيبة طوارئ مخصصة لاحتياجاتك وعائلتك</p>
+        </div>
+    </header>
+
+    <!-- منشئ حقيبة الطوارئ -->
     <section class="kit-builder">
-        <h2>Custom Emergency Kit Builder</h2>
         <div class="kit-categories">
             <div class="category">
-                <h3>Basic Supplies</h3>
+                <h3><i class="fas fa-box-open"></i> المستلزمات الأساسية</h3>
                 <div class="item-list">
                     <div class="kit-item">
                         <input type="checkbox" id="water">
-                        <label for="water">Water (1 gallon per person per day)</label>
+                        <label for="water">ماء (٣ لتر للشخص يومياً)</label>
                         <select class="quantity">
-                            <option>1 day</option>
-                            <option>3 days</option>
-                            <option>7 days</option>
+                            <option>يوم واحد</option>
+                            <option>٣ أيام</option>
+                            <option>٧ أيام</option>
                         </select>
                     </div>
                     <div class="kit-item">
                         <input type="checkbox" id="food">
-                        <label for="food">Non-perishable Food</label>
+                        <label for="food">طعام معلب</label>
                         <select class="quantity">
-                            <option>3 days</option>
-                            <option>7 days</option>
-                            <option>14 days</option>
+                            <option>٣ أيام</option>
+                            <option>٧ أيام</option>
+                            <option>١٤ يوم</option>
                         </select>
                     </div>
                     <div class="kit-item">
                         <input type="checkbox" id="firstaid">
-                        <label for="firstaid">First Aid Kit</label>
+                        <label for="firstaid">حقيبة إسعافات أولية</label>
                         <select class="quantity">
-                            <option>Basic</option>
-                            <option>Advanced</option>
+                            <option>أساسية</option>
+                            <option>متقدمة</option>
                         </select>
                     </div>
                 </div>
             </div>
 
             <div class="category">
-                <h3>Tools and Equipment</h3>
+                <h3><i class="fas fa-tools"></i> الأدوات والمعدات</h3>
                 <div class="item-list">
                     <div class="kit-item">
                         <input type="checkbox" id="flashlight">
-                        <label for="flashlight">Flashlight</label>
+                        <label for="flashlight">مصباح يدوي</label>
                         <select class="quantity">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
+                            <option>١</option>
+                            <option>٢</option>
+                            <option>٣</option>
                         </select>
                     </div>
-                    <!-- Add more items -->
+                    <div class="kit-item">
+                        <input type="checkbox" id="radio">
+                        <label for="radio">راديو يعمل بالبطارية</label>
+                        <select class="quantity">
+                            <option>١</option>
+                            <option>٢</option>
+                        </select>
+                    </div>
+                    <div class="kit-item">
+                        <input type="checkbox" id="batteries">
+                        <label for="batteries">بطاريات إضافية</label>
+                        <select class="quantity">
+                            <option>مجموعة واحدة</option>
+                            <option>مجموعتان</option>
+                            <option>٣ مجموعات</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3><i class="fas fa-file-alt"></i> الوثائق المهمة</h3>
+                <div class="item-list">
+                    <div class="kit-item">
+                        <input type="checkbox" id="id-copies">
+                        <label for="id-copies">نسخ من الهويات</label>
+                        <select class="quantity">
+                            <option>نسخة واحدة</option>
+                            <option>نسختان</option>
+                        </select>
+                    </div>
+                    <div class="kit-item">
+                        <input type="checkbox" id="insurance">
+                        <label for="insurance">وثائق التأمين</label>
+                        <select class="quantity">
+                            <option>نسخة واحدة</option>
+                            <option>نسختان</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
-        <button class="generate-list">Generate Shopping List</button>
+        <button class="generate-list">إنشاء قائمة التسوق <i class="fas fa-shopping-cart"></i></button>
     </section>
 
     <script src="js/emergency-kit.js"></script>

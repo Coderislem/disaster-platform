@@ -6,10 +6,12 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Cairo', 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #F9F9F9;
+    direction: rtl;
+    text-align: right;
 }
 
 /* Typography */
@@ -131,6 +133,7 @@ h1, h2, h3 {
     background: var(--white);
     border: 1px solid rgba(44, 62, 80, 0.1);
     transition: all 0.3s ease;
+    text-align: right;
 }
 
 .disaster-card:hover {
@@ -295,6 +298,7 @@ h1, h2, h3 {
 .nav-links {
     display: flex;
     gap: 2rem;
+    flex-direction: row-reverse;
 }
 
 .nav-link {
@@ -648,6 +652,7 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-direction: row-reverse;
 }
 
 .alert-icon {
@@ -711,6 +716,8 @@ h1, h2, h3 {
     box-shadow: var(--card-shadow);
     border-radius: 5px;
     z-index: 1000;
+    right: 0;
+    left: auto;
 }
 
 .dropdown-content a {
