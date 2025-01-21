@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - DisasterGuard</title>
+  
+    <link rel="stylesheet" href="../css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="contact.html" class="nav-link">اتصل بنا</a>
+            <a href="#" class="nav-link">الموارد</a>
+            <a href="#" class="nav-link">من نحن</a>
+            <a href="home.html" class="nav-link">الرئيسية</a>
+        </div>
+        <img src="./UtzOLGnAQMu3ENEs13MK3g.webp" alt="شعار DisasterGuard" class="logo">
+    </nav>
+
+    <!-- قسم الرأس -->
+    <header class="contact-hero">
+        <div class="hero-content">
+            <h1>اتصل بنا</h1>
+            <p>نحن هنا للمساعدة - تواصل معنا على مدار الساعة</p>
+        </div>
+    </header>
+
+    <!-- معلومات الاتصال -->
+    <section class="contact-info">
+        <div class="contact-grid">
+            <div class="contact-card emergency">
+                <i class="fas fa-phone-alt"></i>
+                <h3>الطوارئ</h3>
+                <p>٩١١</p>
+                <span class="availability">متاح ٢٤/٧</span>
+            </div>
+
+            <div class="contact-card hotline">
+                <i class="fas fa-headset"></i>
+                <h3>الخط الساخن</h3>
+                <p>١-٨٠٠-DISASTER</p>
+                <span class="availability">متاح ٢٤/٧</span>
+            </div>
+
+            <div class="contact-card support">
+                <i class="fas fa-envelope"></i>
+                <h3>الدعم الفني</h3>
+                <p>support@disasterguard.com</p>
+                <span class="availability">الرد خلال ٢٤ ساعة</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- نموذج الاتصال -->
+    <section class="contact-form">
+        <div class="form-container">
+            <h2>أرسل لنا رسالة</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">الاسم الكامل</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">الموضوع</label>
+                    <select id="subject" name="subject">
+                        <option value="emergency">حالة طارئة</option>
+                        <option value="inquiry">استفسار عام</option>
+                        <option value="feedback">تقديم ملاحظات</option>
+                        <option value="other">أخرى</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">الرسالة</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">إرسال الرسالة</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>
