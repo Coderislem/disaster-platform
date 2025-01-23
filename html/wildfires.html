@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دليل السلامة من الحرائق البرية</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="css/wildfires.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/wildfires.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -37,7 +37,7 @@
 
         <!-- خلفية الفيديو -->
         <video autoplay muted loop playsinline class="hero-video">
-            <source src="videos/wildfire-background.mp4" type="video/mp4">
+            <source src="../videos/STUNNING 4K Footage of Oregon Interstate 5 Milepost 97 Wildfire(720P_HD).mp4" type="video/mp4">
             <img src="./hero_img/wildfire-fallback.jpg" alt="مشهد حريق بري">
         </video>
 
@@ -167,7 +167,7 @@
             <div class="experience-card">
                 <div class="experience-header">
                     <div class="user-info">
-                        <img src="avatars/user3.jpg" alt="عمر السيد" class="user-avatar">
+                        <img src="../people_avatar/image_1.jpeg" alt="عمر السيد" class="user-avatar">
                         <div class="user-details">
                             <h4>عمر السيد</h4>
                             <p>الطائف، المملكة العربية السعودية</p>
@@ -188,7 +188,7 @@
             <div class="experience-card">
                 <div class="experience-header">
                     <div class="user-info">
-                        <img src="avatars/user4.jpg" alt="ليلى العمري" class="user-avatar">
+                        <img src="../people_avatar/image_2.jpeg" alt="ليلى العمري" class="user-avatar">
                         <div class="user-details">
                             <h4>ليلى العمري</h4>
                             <p>عمّان، الأردن</p>
@@ -209,7 +209,7 @@
             <div class="experience-card">
                 <div class="experience-header">
                     <div class="user-info">
-                        <img src="avatars/user5.jpg" alt="محمد الأحمد" class="user-avatar">
+                        <img src="../people_avatar/image_3.jpg" alt="محمد الأحمد" class="user-avatar">
                         <div class="user-details">
                             <h4>محمد الأحمد</h4>
                             <p>بيروت، لبنان</p>
@@ -230,7 +230,7 @@
             <div class="experience-card">
                 <div class="experience-header">
                     <div class="user-info">
-                        <img src="avatars/user6.jpg" alt="فاطمة المغربي" class="user-avatar">
+                        <img src="../people_avatar/image_4.png" alt="فاطمة المغربي" class="user-avatar">
                         <div class="user-details">
                             <h4>فاطمة المغربي</h4>
                             <p>الرباط، المغرب</p>
@@ -249,10 +249,85 @@
         </div>
     </section>
 
+    <!-- قسم آخر التحديثات عن حرائق لوس أنجلوس -->
+    <section class="latest-updates">
+        <h2>آخر تحديثات حرائق لوس أنجلوس</h2>
+        <div class="update-container">
+            <div class="update-status">
+                <div class="status-indicator active">
+                    <span class="pulse"></span>
+                    حريق نشط
+                </div>
+                <div class="last-updated">
+                    آخر تحديث: <span id="lastUpdateTime">قبل ٢ ساعات</span>
+                </div>
+            </div>
+            
+            <div class="wildfire-stats">
+                <div class="stat-card">
+                    <i class="fas fa-fire"></i>
+                    <h4>المساحة المتضررة</h4>
+                    <p>٧,٥٠٠ هكتار</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-home"></i>
+                    <h4>المنازل المهددة</h4>
+                    <p>٢,٣٠٠ منزل</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-percentage"></i>
+                    <h4>نسبة الاحتواء</h4>
+                    <p>٣٥٪</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h4>عدد المخلين</h4>
+                    <p>٥,٨٠٠ شخص</p>
+                </div>
+            </div>
+
+            <div class="current-conditions">
+                <h3>الظروف الحالية</h3>
+                <div class="conditions-grid">
+                    <div class="condition">
+                        <i class="fas fa-temperature-high"></i>
+                        <span>درجة الحرارة: ٣٨°م</span>
+                    </div>
+                    <div class="condition">
+                        <i class="fas fa-wind"></i>
+                        <span>سرعة الرياح: ٢٥ كم/س</span>
+                    </div>
+                    <div class="condition">
+                        <i class="fas fa-tint"></i>
+                        <span>الرطوبة: ١٥٪</span>
+                    </div>
+                    <div class="condition">
+                        <i class="fas fa-smog"></i>
+                        <span>جودة الهواء: خطرة</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="evacuation-zones">
+                <h3>مناطق الإخلاء</h3>
+                <div class="zone-list">
+                    <div class="zone red">
+                        <span class="zone-status">إخلاء إلزامي</span>
+                        <p>توبانغا كانيون، وودلاند هيلز، كالاباساس</p>
+                    </div>
+                    <div class="zone yellow">
+                        <span class="zone-status">تحذير إخلاء</span>
+                        <p>سيمي فالي، ثاوزند أوكس، أجورا هيلز</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- إضافة المكتبات والسكربتات -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/wildfires.js"></script>
-
+    <script src="../js/wildfires.js"></script>
+    <script src="../js/home.js"></script>
     <style>
         body {
             font-family: 'Cairo', sans-serif;
@@ -279,6 +354,151 @@
 
         .contact-card {
             text-align: center;
+        }
+
+        .latest-updates {
+            padding: 3rem 2rem;
+            background-color: #fff;
+        }
+
+        .update-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .update-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .status-indicator.active {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ff4444;
+            font-weight: bold;
+        }
+
+        .pulse {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ff4444;
+            animation: pulse 1.5s infinite;
+        }
+
+        .wildfire-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+        }
+
+        .stat-card i {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .conditions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .condition {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .zone-list {
+            margin-top: 1rem;
+        }
+
+        .zone {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+
+        .zone.red {
+            background: rgba(255, 68, 68, 0.1);
+            border-right: 4px solid #ff4444;
+        }
+
+        .zone.yellow {
+            background: rgba(255, 193, 7, 0.1);
+            border-right: 4px solid #ffc107;
+        }
+
+        .zone-status {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .zone.red .zone-status {
+            color: #ff4444;
+        }
+
+        .zone.yellow .zone-status {
+            color: #ffc107;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.5;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .wildfire-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .conditions-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.2),
+                rgba(230, 81, 0, 0.3)
+            );
+            z-index: 2;
+            pointer-events: none;
         }
     </style>
 </body>
