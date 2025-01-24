@@ -197,7 +197,10 @@
 }
 
 .facilities-map {
-    height: 400px;
+    height: 500px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--gray-300);
     margin-top: 2rem;
 }
 
@@ -226,4 +229,40 @@
 
 .guide-card:hover {
     transform: translateY(-5px);
+}
+
+.map-section {
+    padding: 4rem 2rem;
+    background: var(--gray-100);
+}
+
+.map-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.map-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.map-filter {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-sm);
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.map-filter.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
 }

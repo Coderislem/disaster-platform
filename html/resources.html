@@ -99,7 +99,18 @@
         </div>
     </section>
 
-    <div id="map" class="facilities-map"></div>
+    <section class="map-section">
+        <div class="map-container">
+            <h2>مواقع مراكز الطوارئ</h2>
+            <div class="map-controls">
+                <button class="map-filter active" data-type="all">الكل</button>
+                <button class="map-filter" data-type="hospitals">المستشفيات</button>
+                <button class="map-filter" data-type="shelters">مراكز الإيواء</button>
+                <button class="map-filter" data-type="police">مراكز الشرطة</button>
+            </div>
+            <div id="map" class="facilities-map"></div>
+        </div>
+    </section>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="../js/resources.js"></script>
