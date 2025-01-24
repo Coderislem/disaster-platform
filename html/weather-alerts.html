@@ -1,14 +1,88 @@
-<section class="weather-alerts">
-    <h2>Real-time Weather Alerts</h2>
-    <div class="alert-dashboard">
-        <div class="current-conditions">
-            <!-- Weather API integration -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تنبيهات الطقس | DisasterGuard</title>
+    <link rel="stylesheet" href="../css/weather-alerts.css">
+  
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation from home.html -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="contact.html" class="nav-link">اتصل بنا</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">الموارد ▾</a>
+                <div class="dropdown-content">
+                    <a href="weather-alerts.html">تنبيهات الطقس</a>
+                    <a href="resources.html">خدمات الطوارئ</a>
+                    <a href="forum.html">منتدى المجتمع</a>
+                    <a href="help.html">طرق المساعدة</a>
+                </div>
+            </div>
+            <a href="#about-us" class="nav-link">من نحن</a>
+            <a href="home.html" class="nav-link">الرئيسية</a>
         </div>
-        <div class="forecast">
-            <!-- 7-day forecast -->
+        <img src="./UtzOLGnAQMu3ENEs13MK3g.webp" alt="شعار DisasterGuard" class="logo">
+    </nav>
+
+    <section class="weather-hero">
+        <div class="weather-overview">
+            <h1>تنبيهات الطقس المباشرة</h1>
+            <div class="current-weather">
+                <div class="weather-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="weather-info">
+                    <h2>قالمة</h2>
+                    <p class="temperature">38°C</p>
+                    <p class="condition">مشمس</p>
+                </div>
+            </div>
         </div>
-        <div class="alert-list">
-            <!-- Active weather alerts -->
+    </section>
+
+    <section class="alerts-grid">
+        <div class="alert-card severe">
+            <div class="alert-header">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>تنبيه شديد</h3>
+            </div>
+            <p>عاصفة رملية متوقعة في المنطقة الشرقية</p>
+            <span class="timestamp">منذ ساعتين</span>
         </div>
-    </div>
-</section> 
+        <div class="alert-card warning">
+            <div class="alert-header">
+                <i class="fas fa-wind"></i>
+                <h3>تحذير</h3>
+            </div>
+            <p>رياح شديدة متوقعة في المنطقة الشمالية</p>
+            <span class="timestamp">منذ 4 ساعات</span>
+        </div>
+    </section>
+
+    <section class="weather-map">
+        <h2>خريطة الطقس التفاعلية</h2>
+        <div id="map"></div>
+    </section>
+
+    <section class="alerts-subscription">
+        <h2>اشترك في التنبيهات</h2>
+        <form class="subscribe-form">
+            <input type="email" placeholder="البريد الإلكتروني" required>
+            <button type="submit" class="subscribe-btn">اشتراك</button>
+        </form>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/weather-alerts.js"></script>
+    <script src="../js/home.js"></script>
+</body>
+</html>

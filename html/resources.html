@@ -1,16 +1,107 @@
-<section class="resource-directory">
-    <h2>Emergency Resources</h2>
-    <div class="directory-grid">
-        <div class="resource-category">
-            <h3>Emergency Services</h3>
-            <ul class="resource-list">
-                <li>
-                    <h4>Local Fire Department</h4>
-                    <p>Contact: xxx-xxx-xxxx</p>
-                    <a href="#" class="map-link">View on Map</a>
-                </li>
-                <!-- More resources -->
-            </ul>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خدمات الطوارئ | DisasterGuard</title>
+    <link rel="stylesheet" href="../css/resources.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+</head>
+<body>
+    <!-- Navigation (same as other pages) -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="contact.html" class="nav-link">اتصل بنا</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">الموارد ▾</a>
+                <div class="dropdown-content">
+                    <a href="weather-alerts.html">تنبيهات الطقس</a>
+                    <a href="resources.html">خدمات الطوارئ</a>
+                    <a href="forum.html">منتدى المجتمع</a>
+                    <a href="help.html">طرق المساعدة</a>
+                </div>
+            </div>
+            <a href="#about-us" class="nav-link">من نحن</a>
+            <a href="home.html" class="nav-link">الرئيسية</a>
         </div>
-    </div>
-</section>  
+        <img src="./UtzOLGnAQMu3ENEs13MK3g.webp" alt="شعار DisasterGuard" class="logo">
+    </nav>
+
+    <section class="emergency-hero">
+        <h1>خدمات الطوارئ</h1>
+        <div class="quick-contacts">
+            <div class="contact-card">
+                <i class="fas fa-ambulance"></i>
+                <h3>الإسعاف</h3>
+                <a href="tel:1548" class="emergency-number">1548</a>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-fire-extinguisher"></i>
+                <h3>الحماية المدنية</h3>
+                <a href="tel:1021" class="emergency-number">1021</a>
+            </div>
+            <div class="contact-card">
+                <i class="fas fa-phone"></i>
+                <h3>شرطة النجدة</h3>
+                <a href="tel:1548" class="emergency-number">1548</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="resources-grid">
+        <div class="resource-category">
+            <h2>مراكز الإيواء</h2>
+            <div class="resource-items">
+                <div class="resource-item">
+                    <img src="../hero_img/unera.webp" alt="مركز إيواء">
+                    <h3>مركز الإيواء المركزي</h3>
+                    <p>يقع في وسط المدينة، مجهز لاستقبال 500 شخص</p>
+                    <button class="location-btn" data-coords="36.4627,7.4332">
+                        <i class="fas fa-map-marker-alt"></i> عرض الموقع
+                    </button>
+                </div>
+                <!-- More shelter items -->
+            </div>
+        </div>
+
+        <div class="resource-category">
+            <h2>المستشفيات</h2>
+            <div class="resource-items">
+                <div class="resource-item">
+                    <img src="../hero_img/ibn.jpeg" alt="مستشفى">
+                    <h3>مستشفى ابن زهر</h3>
+                    <p>خدمات طوارئ 24/7</p>
+                    <button class="location-btn" data-coords="36.4627,7.4332">
+                        <i class="fas fa-map-marker-alt"></i> عرض الموقع
+                    </button>
+                </div>
+                <!-- More hospital items -->
+            </div>
+        </div>
+    </section>
+
+    <section class="emergency-guides">
+        <h2>أدلة الطوارئ</h2>
+        <div class="guides-grid">
+            <a href="../docs/Noor-Book.com دليل الإسعافات الأولية.pdf" class="guide-card">
+                <i class="fas fa-file-pdf"></i>
+                <h3>دليل الإسعافات الأولية</h3>
+                <p>PDF - 2.3 MB</p>
+            </a>
+            <a href="../docs/Noor-Book.com سلسلة عالم بلا حرائق محاضرة خطة التأمين والطوارئ والإخلاء.pdf" class="guide-card">
+                <i class="fas fa-file-pdf"></i>
+                <h3>خطة الإخلاء</h3>
+                <p>PDF - 1.8 MB</p>
+            </a>
+        </div>
+    </section>
+
+    <div id="map" class="facilities-map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="../js/resources.js"></script>
+</body>
+</html>
