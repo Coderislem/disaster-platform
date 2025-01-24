@@ -3,78 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منتدى المجتمع | DisasterGuard</title>
-    <link rel="stylesheet" href="../css/forum.css">
+    <title>طرق المساعدة | DisasterGuard</title>
+    <link rel="stylesheet" href="../css/help.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="nav-links">
-            <a href="home.html" class="nav-link">الرئيسية</a>
-            <a href="#about-us" class="nav-link">من نحن</a>
-            <div class="dropdown">
-                <a href="#" class="nav-link">الموارد ▾</a>
-                <div class="dropdown-content">
-                    <a href="weather-alerts.html">تنبيهات الطقس</a>
-                    <a href="resources.html">خدمات الطوارئ</a>
-                    <a href="forum.html">منتدى المجتمع</a>
-                    <a href="help.html">طرق المساعدة</a>
-                </div>
-            </div>
-            <a href="contact.html" class="nav-link">اتصل بنا</a>
-        </div>
-        <img src="./UtzOLGnAQMu3ENEs13MK3g.webp" alt="شعار DisasterGuard" class="logo">
+        <!-- Same navbar as other pages -->
+        ...existing code...
     </nav>
 
-    <!-- Forum Header -->
-    <section class="forum-hero">
-        <h1>منتدى المجتمع</h1>
-        <div class="search-container">
-            <input type="text" placeholder="ابحث في المنتدى..." class="search-input">
-            <button class="search-btn"><i class="fas fa-search"></i></button>
-        </div>
+    <!-- Hero Section -->
+    <section class="help-hero">
+        <h1>طرق المساعدة</h1>
+        <p>معاً نستطيع صنع الفرق في حالات الطوارئ</p>
     </section>
 
-    <!-- Categories Section -->
-    <section class="forum-categories">
-        <h2>التصنيفات</h2>
-        <div class="category-grid">
-            <div class="category-card">
-                <i class="fas fa-fire"></i>
-                <h3>الحرائق والسلامة</h3>
-                <span class="topic-count">15 موضوع</span>
-            </div>
-            <div class="category-card">
-                <i class="fas fa-water"></i>
-                <h3>الفيضانات</h3>
-                <span class="topic-count">23 موضوع</span>
-            </div>
-            <div class="category-card">
-                <i class="fas fa-house-damage"></i>
-                <h3>الزلازل</h3>
-                <span class="topic-count">18 موضوع</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Recent Discussions -->
-    <section class="recent-discussions">
-        <h2>آخر المناقشات</h2>
-        <div class="discussion-list">
-            <div class="discussion-card">
-                <div class="user-avatar">
-                    <img src="../images/avatar1.jpg" alt="User">
+    <!-- Ways to Help Section -->
+    <section class="help-ways">
+        <div class="container">
+            <h2>كيف يمكنك المساعدة؟</h2>
+            <div class="help-grid">
+                <div class="help-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>تبرع</h3>
+                    <p>تبرعك يساعد في توفير المواد الضرورية للمتضررين</p>
+                    <a href="#donate" class="help-btn">تبرع الآن</a>
                 </div>
-                <div class="discussion-content">
-                    <h3>كيفية الاستعداد للزلازل</h3>
-                    <p>نصائح مهمة للاستعداد لحالات الزلازل...</p>
-                    <div class="discussion-meta">
-                        <span><i class="fas fa-user"></i> أحمد محمد</span>
-                        <span><i class="fas fa-clock"></i> منذ ساعتين</span>
-                        <span><i class="fas fa-comments"></i> 12 رد</span>
-                    </div>
+
+                <div class="help-card">
+                    <i class="fas fa-users"></i>
+                    <h3>تطوع</h3>
+                    <p>انضم إلى فريق المتطوعين وساعد في عمليات الإنقاذ</p>
+                    <a href="#volunteer" class="help-btn">سجل كمتطوع</a>
+                </div>
+
+                <div class="help-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>تدرب</h3>
+                    <p>احصل على التدريب اللازم للمساعدة في حالات الطوارئ</p>
+                    <a href="#training" class="help-btn">ابدأ التدريب</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Kit Section -->
+    <section class="emergency-kit">
+        <div class="container">
+            <h2>حقيبة الطوارئ</h2>
+            <div class="kit-content">
+                <div class="kit-info">
+                    <h3>محتويات أساسية</h3>
+                    <ul class="kit-list">
+                        <li><i class="fas fa-check"></i> ماء وطعام لمدة 3 أيام</li>
+                        <li><i class="fas fa-check"></i> مصباح يدوي وبطاريات</li>
+                        <li><i class="fas fa-check"></i> حقيبة إسعافات أولية</li>
+                        <li><i class="fas fa-check"></i> راديو يعمل بالبطارية</li>
+                    </ul>
+                    <a href="#download" class="download-btn">تحميل القائمة الكاملة</a>
+                </div>
+                <div class="kit-image">
+                    <img src="../images/emergency-kit.jpg" alt="حقيبة طوارئ">
                 </div>
             </div>
         </div>
