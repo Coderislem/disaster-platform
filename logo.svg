@@ -1,15 +1,75 @@
-<svg width="250" height="60" viewBox="0 0 250 60" xmlns="http://www.w3.org/2000/svg">
-    <!-- Background Shield -->
-    <path d="M30 5 L70 5 L70 55 L30 55 C10 55 0 45 0 25 C0 5 10 5 30 5" 
-          fill="#E67E22"/>
-    
-    <!-- Warning Symbol -->
-    <path d="M30 15 L45 40 L15 40 Z" fill="#ffffff"/>
-    <circle cx="30" cy="35" r="3" fill="#E67E22"/>
-    <rect x="28" y="22" width="4" height="10" fill="#E67E22"/>
-    
-    <!-- Text -->
-    <text x="80" y="40" font-family="Montserrat" font-weight="bold" font-size="30" fill="#2A4D69">
-        DisasterGuard
-    </text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <!-- Background -->
+  <rect width="500" height="500" fill="#2c2c2c" />
+
+  <!-- Wave (representing tsunami) -->
+  <path d="M500 400 C400 150, 150 150, 50 300 Q0 400, 0 500 L500 500 Z" fill="#0a2955" />
+
+  <!-- Darker wave accent for depth -->
+  <path d="M450 420 C360 180, 160 180, 80 340 Q30 400, 10 500 L500 500 Z" fill="#0d3a70" />
+
+  <!-- Rain (representing floods) -->
+  <g stroke="#8c8c8c" stroke-width="2">
+    <line x1="70" y1="50" x2="90" y2="90" />
+    <line x1="120" y1="70" x2="140" y2="110" />
+    <line x1="170" y1="30" x2="190" y2="80" />
+    <line x1="220" y1="50" x2="240" y2="100" />
+    <line x1="270" y1="20" x2="290" y2="70" />
+    <line x1="320" y1="40" x2="340" y2="90" />
+  </g>
+
+  <!-- Lightning (representing storm danger) -->
+  <polygon points="300,80 320,120 290,120 310,160 280,160 300,200" fill="#ffcc00" />
+
+  <!-- Buildings (representing urban areas) -->
+  <g fill="#1b1b1b">
+    <rect x="100" y="300" width="60" height="200" />
+    <rect x="180" y="250" width="80" height="250" />
+    <rect x="300" y="320" width="70" height="180" />
+  </g>
+
+  <!-- Cracks in buildings -->
+  <path d="M110 350 L130 360 L120 370 L140 380" stroke="#ff4444" stroke-width="2" />
+  <path d="M190 300 L210 310 L200 330 L230 350" stroke="#ff4444" stroke-width="2" />
+  <path d="M310 370 L330 380 L320 400 L340 420" stroke="#ff4444" stroke-width="2" />
+
+  <!-- Building Windows -->
+  <g fill="#525252">
+    <!-- Left Building -->
+    <rect x="110" y="320" width="10" height="10" />
+    <rect x="130" y="320" width="10" height="10" />
+    <rect x="110" y="340" width="10" height="10" />
+    <rect x="130" y="340" width="10" height="10" />
+
+    <!-- Middle Building -->
+    <rect x="190" y="270" width="10" height="10" />
+    <rect x="210" y="270" width="10" height="10" />
+    <rect x="230" y="270" width="10" height="10" />
+    <rect x="190" y="290" width="10" height="10" />
+    <rect x="210" y="290" width="10" height="10" />
+    <rect x="230" y="290" width="10" height="10" />
+
+    <!-- Right Building -->
+    <rect x="310" y="340" width="10" height="10" />
+    <rect x="330" y="340" width="10" height="10" />
+    <rect x="310" y="360" width="10" height="10" />
+    <rect x="330" y="360" width="10" height="10" />
+  </g>
+
+  <!-- Collapsed Tree (symbolizing destruction) -->
+  <line x1="420" y1="400" x2="460" y2="460" stroke="#2b1d0e" stroke-width="10" />
+  <path d="M420 400 Q400 380, 380 420" stroke="#2b1d0e" stroke-width="6" fill="none" />
+  <path d="M420 400 Q440 370, 460 390" stroke="#2b1d0e" stroke-width="6" fill="none" />
+
+  <!-- Dark Clouds (representing stormy weather) -->
+  <ellipse cx="150" cy="100" rx="80" ry="40" fill="#1b1b1b" />
+  <ellipse cx="250" cy="80" rx="100" ry="50" fill="#1b1b1b" />
+  <ellipse cx="350" cy="120" rx="90" ry="40" fill="#1b1b1b" />
+
+  <!-- Fire (symbolizing destruction) -->
+  <g>
+    <path d="M120 450 C110 430, 130 420, 125 410 C140 420, 140 440, 120 450 Z" fill="#ff5722" />
+    <path d="M125 440 C115 420, 135 410, 130 400 C145 410, 145 430, 125 440 Z" fill="#ff7043" />
+  </g>
+
 </svg>

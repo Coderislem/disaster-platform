@@ -165,3 +165,39 @@
         padding: 1.5rem;
     }
 }
+
+
+.navbar {
+    position: fixed;
+    top: 40px; /* Account for alert banner */
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    background: rgba(44, 62, 80, 0.95);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(44, 62, 80, 0.98);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-svg {
+    width: 40px;
+    height: 40px;
+    fill: #fff;
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Cairo', sans-serif;
+}

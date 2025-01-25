@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earthquake Safety Guide</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="css/earthquakes.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>الزلازل | نظام الحماية من الكوارث</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/earthquakes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -15,25 +15,37 @@
         <div class="alert-content">
             <div class="alert-icon">⚠️</div>
             <div class="alert-message">
-                <strong>WARNING:</strong> 
-                <span id="alertText">Recent seismic activity detected in multiple regions</span>
+                <strong>تنبيه:</strong> 
+                <span id="alertText">تم رصد نشاط زلزالي في عدة مناطق</span>
             </div>
         </div>
         <button class="alert-close" onclick="closeAlert()">×</button>
     </div>
 
-    <!-- Hero Section with Video Background -->
+    <!-- Hero Section -->
     <header class="earthquake-hero">
         <!-- Navigation Bar -->
         <nav class="navbar">
             <div class="nav-links">
-                <a href="#" class="nav-link">اتصل بنا</a>
-                <a href="#" class="nav-link">الموارد</a>
-                <a href="#" class="nav-link">من نحن</a>
+                <a href="contact.html" class="nav-link">اتصل بنا</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link">الموارد ▾</a>
+                    <div class="dropdown-content">
+                        <a href="weather-alerts.html">تنبيهات الطقس</a>
+                        <a href="resources.html">خدمات الطوارئ</a>
+                        <a href="forum.html">منتدى المجتمع</a>
+                        <!-- <a href="help.html">طرق المساعدة</a> -->
+                    </div>
+                </div>
+                
                 <a href="home.html" class="nav-link">الرئيسية</a>
             </div>
-            <img src="./UtzOLGnAQMu3ENEs13MK3g.webp" alt="شعار DisasterGuard" class="logo">
-        </nav>
+            <div class="logo-container">
+                <svg class="logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M57.7 193l9.4 16.4c8.3 14.5 21.9 25.2 38 29.8L163 255.7c17.2 4.9 29 20.6 29 38.5v39.9c0 11 6.2 21 16 25.9s16 14.9 16 25.9v39c0 15.6 14.9 26.9 29.9 22.6c16.1-4.6 28.6-17.5 32.7-33.8l2.8-11.2c4.2-16.9 15.2-31.4 30.3-40l8.1-4.6c15-8.5 24.2-24.5 24.2-41.7v-8.3c0-12.7-5.1-24.9-14.1-33.9l-3.9-3.9c-9-9-21.2-14.1-33.9-14.1L257 256c-11.1 0-22.1-2.9-31.8-8.4l-34.5-19.7c-4.3-2.5-7.6-6.5-9.2-11.2c-3.2-9.6 1.1-20 10.2-24.5l5.9-3c6.6-3.3 14.3-3.9 21.3-1.5l23.2 7.7c8.2 2.7 17.2-.4 21.9-7.5c4.7-7 4.2-16.3-1.2-22.8l-13.6-16.3c-10-12-9.9-29.5 .3-41.3l15.7-18.3c8.8-10.3 10.2-25 3.5-36.7l-2.4-4.2c-3.5-.2-6.9-.3-10.4-.3C163.1 48 84.4 108.9 57.7 193zM464 256c0-36.8-9.6-71.4-26.4-101.5L412 164.8c-15.7 6.3-23.8 23.8-18.5 39.8l16.9 50.7c3.5 10.4 12 18.3 22.6 20.9l29.1 7.3c1.2-9 1.8-18.2 1.8-27.5zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/>
+                </svg>
+                <span class="logo-text">الحماية من الكوارث</span>
+            </div>          </nav>
 
         <!-- Video Background -->
         <video autoplay muted loop playsinline class="hero-video">
@@ -41,82 +53,80 @@
             <img src="./hero_img/earthquake-fallback.jpg" alt="Earthquake Scene">
         </video>
 
-        <!-- Hero Overlay -->
         <div class="hero-overlay"></div>
 
-        <!-- Hero Content -->
         <div class="hero-content">
-            <h1 class="animate-text">Earthquake Safety Guide</h1>
-            <p class="animate-text-delay">Learn how to prepare, respond, and survive during earthquakes</p>
+            <h1 class="animate-text">دليل السلامة من الزلازل</h1>
+            <p class="animate-text-delay">تعرف على كيفية الاستعداد والتصرف والنجاة أثناء الزلازل</p>
             <div class="cta-buttons animate-up">
                 <button class="emergency-call">
                     <i class="fas fa-phone"></i>
-                    Emergency: 911
+                    للطوارئ: 1548
                 </button>
-                <button class="cta-secondary">View Safety Tips</button>
+                <button class="cta-secondary">إرشادات السلامة</button>
             </div>
         </div>
     </header>
 
     <!-- Quick Facts Panel -->
     <section class="quick-facts">
-        <h2>Essential Earthquake Information</h2>
+        <h2>معلومات أساسية عن الزلازل</h2>
         <div class="fact-container">
             <div class="fact-card">
                 <i class="fas fa-globe-americas"></i>
-                <h3>What is an Earthquake?</h3>
-                <p>An earthquake is a sudden release of energy in Earth's crust that creates seismic waves.</p>
+                <h3>ما هو الزلزال؟</h3>
+                <p>الزلزال هو تحرير مفاجئ للطاقة في القشرة الأرضية يخلق موجات زلزالية</p>
             </div>
             <div class="fact-card">
                 <i class="fas fa-exclamation-triangle"></i>
-                <h3>Warning Signs</h3>
-                <p>Foreshocks, unusual animal behavior, and ground deformation can precede major earthquakes.</p>
+                <h3>علامات التحذير</h3>
+                <p>الهزات الأولية، سلوك الحيوانات غير العادي، وتشوه سطح الأرض قد تسبق الزلازل الكبرى</p>
             </div>
             <div class="fact-card">
                 <i class="fas fa-chart-line"></i>
-                <h3>Magnitude Scale</h3>
-                <p>The Richter scale measures earthquake intensity, with each number representing a 10-fold increase.</p>
+                <h3>مقياس الشدة</h3>
+                <p>يقيس مقياس ريختر شدة الزلازل، حيث يمثل كل رقم زيادة بمقدار 10 أضعاف</p>
             </div>
             <div class="fact-card">
                 <i class="fas fa-house-damage"></i>
-                <h3>Structural Impact</h3>
-                <p>Earthquakes can damage buildings, trigger landslides, and cause devastating tsunamis.</p>
+                <h3>التأثير الهيكلي</h3>
+                <p>يمكن للزلازل أن تلحق الضرر بالمباني وتسبب الانهيارات الأرضية والتسونامي المدمر</p>
             </div>
         </div>
     </section>
 
     <!-- Safety Guidelines -->
     <section class="safety-guidelines">
-        <h2>Before, During & After an Earthquake</h2>
+        <h2>إرشادات السلامة</h2>
         <div class="guidelines-grid">
-            <div class="guideline-card before">
-                <h3><i class="fas fa-clipboard-check"></i> Before an Earthquake</h3>
+            <div class="guideline-card">
+                <i class="fas fa-house-damage"></i>
+                <h3>قبل الزلزال</h3>
                 <ul>
-                    <li>Secure heavy furniture</li>
-                    <li>Create emergency kit</li>
-                    <li>Identify safe spots</li>
-                    <li>Practice Drop, Cover, Hold</li>
-                    <li>Know utility shutoffs</li>
+                    <li>تأمين الأثاث الثقيل</li>
+                    <li>تحديد أماكن آمنة في المنزل</li>
+                    <li>تجهيز حقيبة طوارئ</li>
+                    <li>معرفة مخارج الطوارئ</li>
                 </ul>
             </div>
-            <div class="guideline-card during">
-                <h3><i class="fas fa-exclamation-circle"></i> During an Earthquake</h3>
+            <div class="guideline-card">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>أثناء الزلزال</h3>
                 <ul>
-                    <li>Drop, Cover, and Hold On</li>
-                    <li>Stay away from windows</li>
-                    <li>If in bed, stay there</li>
-                    <li>Avoid doorways</li>
-                    <li>Wait for shaking to stop</li>
+                    <li>البقاء في مكان آمن</li>
+                    <li>الابتعاد عن النوافذ</li>
+                    <li>عدم استخدام المصعد</li>
+                    <li>حماية الرأس</li>
                 </ul>
             </div>
-            <div class="guideline-card after">
-                <h3><i class="fas fa-hand-holding-medical"></i> After an Earthquake</h3>
+            <div class="guideline-card">
+                <i class="fas fa-first-aid"></i>
+                <h3>بعد الزلزال</h3>
                 <ul>
-                    <li>Check for injuries</li>
-                    <li>Watch for aftershocks</li>
-                    <li>Monitor news updates</li>
-                    <li>Inspect for damage</li>
-                    <li>Avoid damaged areas</li>
+                    <li>تفقد المصابين</li>
+                    <li>الابتعاد عن المباني المتضررة</li>
+                    <li>الاستماع للتعليمات الرسمية</li>
+                    <li>التأكد من سلامة المرافق</li>
                 </ul>
             </div>
         </div>
@@ -124,40 +134,48 @@
 
     <!-- Emergency Contacts -->
     <section class="emergency-contacts">
-        <h2>Emergency Contacts</h2>
+        <h2>أرقام الطوارئ</h2>
         <div class="contacts-grid">
             <div class="contact-card">
                 <i class="fas fa-ambulance"></i>
-                <h3>Emergency Services</h3>
-                <p>911</p>
+                <h3>الإسعاف</h3>
+                <p>1548</p>
             </div>
             <div class="contact-card">
                 <i class="fas fa-phone-alt"></i>
-                <h3>Seismic Center</h3>
-                <p>1-800-QUAKE-INFO</p>
+                <h3>مركز الزلازل الوطني</h3>
+                <p>1466</p>
             </div>
             <div class="contact-card">
                 <i class="fas fa-hospital"></i>
-                <h3>Emergency Medical</h3>
-                <p>1-800-HOSPITAL</p>
+                <h3>الدفاع المدني</h3>
+                <p>1021</p>
             </div>
         </div>
     </section>
 
-    <!-- Add this section before Emergency Contacts -->
+    <!-- إضافة قسم الإحصائيات -->
     <section class="statistics-section">
-        <h2>Disaster Statistics</h2>
+        <h2>إحصائيات الكوارث</h2>
         <div class="charts-container">
             <div class="chart-card">
+                <h3>الإحصائيات السنوية</h3>
                 <canvas id="yearlyStats"></canvas>
             </div>
             <div class="chart-card">
+                <h3>تأثير الكوارث</h3>
                 <canvas id="impactStats"></canvas>
             </div>
         </div>
     </section>
 
-    <script src="js/earthquakes.js"></script>
+    <script>
+        // تحديث خيارات الرسم البياني بالعربية
+        Chart.defaults.font.family = 'Cairo';
+        Chart.defaults.color = '#2C3E50';
+    </script>
+    <script src="../js/earthquakes.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/home.js"></script>
 </body>
 </html>

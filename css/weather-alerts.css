@@ -229,3 +229,22 @@ body {
         height: 60vh;
     }
 }
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-svg {
+    width: 40px;
+    height: 40px;
+    fill: #fff;
+}
+
+.logo-text {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Cairo', sans-serif;
+}
